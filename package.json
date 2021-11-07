@@ -1,9 +1,9 @@
 {
-  "name": "@rweich/userscript-template",
+  "name": "@mangadoot/mangareader",
   "version": "0.0.0-development",
   "description": "Template for userscript development.",
   "private": "true",
-  "author": "rweich",
+  "author": "mangadoot",
   "license": "MIT",
   "scripts": {
     "build": "webpack --mode=development",
@@ -65,10 +65,7 @@
   "engines": {
     "node": ">=12"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rweich/userscript-template.git"
-  },
+  "repository": "mangadoot/mangareader",
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"

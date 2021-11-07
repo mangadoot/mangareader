@@ -3,11 +3,11 @@ import WebpackUserscript from 'webpack-userscript';
 function generateHeaders(isDevelopment: boolean, buildVersion?: string): WebpackUserscript.HeaderObject {
   /* eslint-disable sort-keys */
   const header: WebpackUserscript.HeaderObject = {
-    name: 'userscript-template',
-    description: 'a userscript-template',
+    name: 'mangareader',
+    description: 'some quality-of-life improvements for a few manga reading sites',
     version: buildVersion !== undefined ? buildVersion : '[version]',
-    author: 'rweich',
-    namespace: 'https://github.com/rweich',
+    author: 'mangadoot',
+    namespace: 'https://github.com/mangadoot',
     license: 'MIT',
     match: ['*://www.google.com/*'],
     connect: ['www.google.com'],
