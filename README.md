@@ -12,3 +12,4 @@ some quality-of-life improvements for a few manga reading sites
 ### ReadGrandBlue
 
 - show the images full size instead of them being scaled down
+- jump to prev/next image using the arrow keys (left/right)
