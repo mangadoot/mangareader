@@ -18,7 +18,7 @@ export default class CatManga extends AbstractSite {
   }
 
   protected shouldHandleSite(url: URL): boolean {
-    return url.host === 'catmanga.org';
+    return url.host === 'catmanga.org' && /^\/series\//.test(url.pathname);
   }
 
   private makeItNotShit(script: HTMLElement): void {
