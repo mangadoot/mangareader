@@ -1,15 +1,15 @@
-import './read-grand-blue.scss';
+import AbstractSite from '@/AbstractSite';
+import styles from './read-grand-blue.lazy.scss';
 
-import { Logger } from 'ts-log';
+export default class ReadGrandBlue extends AbstractSite {
+  protected readonly siteName = 'ReadGrandBlue';
 
-export default class ReadGrandBlue {
-  private readonly logger: Logger;
-
-  constructor(logger: Logger) {
-    this.logger = logger;
+  protected handleSite(): void {
+    this.logger.info('just css for now...');
+    styles.use();
   }
 
-  public init(): void {
-    this.logger.info('just css for now...');
+  protected shouldHandleSite(url: URL): boolean {
+    return url.host === 'readgrandblue.com';
   }
 }

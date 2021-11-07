@@ -1,16 +1,12 @@
-import './catmanga.scss';
-
-import { Logger } from 'ts-log';
+import AbstractSite from '@/AbstractSite';
 import { is } from 'ts-type-guards';
+import styles from './catmanga.lazy.scss';
 
-export default class CatManga {
-  private readonly logger: Logger;
+export default class CatManga extends AbstractSite {
+  protected readonly siteName = 'CatManga';
 
-  constructor(logger: Logger) {
-    this.logger = logger;
-  }
-
-  public init(): void {
+  protected handleSite(): void {
+    styles.use();
     const script = document.querySelector('#__NEXT_DATA__');
     if (!is(HTMLElement)(script)) {
       this.logger.error('script element not found!');
@@ -19,6 +15,10 @@ export default class CatManga {
     // remove the main container - react crap ...
     document.querySelector('#__next')?.remove();
     this.makeItNotShit(script);
+  }
+
+  protected shouldHandleSite(url: URL): boolean {
+    return url.host === 'catmanga.org';
   }
 
   private makeItNotShit(script: HTMLElement): void {

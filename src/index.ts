@@ -1,6 +1,10 @@
+import AbstractSite from '@/AbstractSite';
 import CatManga from '@/Catmanga';
 import ReadGrandBlue from '@/ReadGrandBlue';
 import logger from './Utils/Logger';
 
-new CatManga(logger).init();
-new ReadGrandBlue(logger).init();
+const sites: AbstractSite[] = [new CatManga(logger), new ReadGrandBlue(logger)];
+
+for (const site of sites) {
+  site.run();
+}
