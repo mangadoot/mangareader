@@ -51,22 +51,8 @@ const config = (
         },
         {
           test: /\.s[ac]ss$/,
-          exclude: /\.lazy\.s[ac]ss$/,
           use: [
             'vue-style-loader',
-            'css-loader',
-            {
-              loader: 'sass-loader',
-              options: {
-                implementation: require('sass'),
-              },
-            },
-          ],
-        },
-        {
-          test: /\.lazy\.s[ac]ss$/,
-          use: [
-            { loader: 'style-loader', options: { injectType: 'lazyStyleTag' } },
             'css-loader',
             {
               loader: 'sass-loader',
