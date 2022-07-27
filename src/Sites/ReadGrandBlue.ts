@@ -1,7 +1,9 @@
-import AbstractSite from '@/AbstractSite';
-import ImageNavigatorFactory from '@/ImageNavigatorFactory';
 import { Logger } from 'ts-log';
 import { is } from 'ts-type-guards';
+
+import AbstractSite from '@/AbstractSite';
+import ImageNavigatorFactory from '@/ImageNavigatorFactory';
+
 import styles from './read-grand-blue.lazy.scss';
 
 export default class ReadGrandBlue extends AbstractSite {

@@ -1,6 +1,6 @@
 import AbstractSite from '@/AbstractSite';
-import CatManga from '@/Sites/Catmanga';
 import ImageNavigatorFactory from '@/ImageNavigatorFactory';
+import CatManga from '@/Sites/Catmanga';
 import ReadGrandBlue from '@/Sites/ReadGrandBlue';
 import logger from '@/Utils/Logger';
 

@@ -1,5 +1,6 @@
-import ImageNavigator from '@/ImageNavigator';
 import { Logger } from 'ts-log';
+
+import ImageNavigator from '@/ImageNavigator';
 
 export default class ImageNavigatorFactory {
   private readonly logger: Logger;
