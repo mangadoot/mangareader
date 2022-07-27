@@ -1,5 +1,7 @@
-import AbstractSite from '@/AbstractSite';
 import { is } from 'ts-type-guards';
+
+import AbstractSite from '@/AbstractSite';
+
 import styles from './catmanga.lazy.scss';
 
 export default class CatManga extends AbstractSite {
