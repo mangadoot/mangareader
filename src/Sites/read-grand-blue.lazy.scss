@@ -1,3 +1,21 @@
-body .entry-content, .entry-summary, .entry-footer, .layout-1c #sidebar-primary > .wrap {
-  max-width: unset;
+body .entry {
+  max-width: unset !important;
+
+  .entry-content {
+    max-width: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p:not(:empty) {
+      margin: 10px 0;
+      border-bottom: 1px solid #bfbfbf;
+      padding: 10px 0;
+
+      :root[data-darkreader-scheme] & {
+        border-bottom-color: #d70e0e !important;
+      }
+    }
+  }
+
 }
